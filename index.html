@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixAtHome - Home Repair</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🔧 FixAtHome</h1>
+    <p>Home Repair, Made Easy</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Repair Services at Your Doorstep</h2>
+      <p>Book a trusted technician for your home.</p>
+    </section>
+
+    <section class="services">
+      <h2>Choose a Service</h2>
+      <div class="service-grid">
+        <button onclick="chooseService('AC Repair')">❄️ AC Repair</button>
+        <button onclick="chooseService('TV Repair')">📺 TV Repair</button>
+        <button onclick="chooseService('Fan Repair')">🌀 Fan Repair</button>
+        <button onclick="chooseService('Fridge Repair')">🧊 Fridge Repair</button>
+        <button onclick="chooseService('Washing Machine')">🧺 Washing Machine</button>
+        <button onclick="chooseService('Electrical Work')">💡 Electrical Work</button>
+      </div>
+    </section>
+
+    <section class="booking">
+      <h2>Book a Technician</h2>
+
+      <form id="bookingForm">
+        <label>Your Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label>Mobile Number</label>
+        <input id="phone" type="tel"
+               placeholder="10-digit mobile number"
+               pattern="[6-9][0-9]{9}" required>
+
+        <label>Service</label>
+        <select id="service" required>
+          <option value="">Select service</option>
+          <option>AC Repair</option>
+          <option>TV Repair</option>
+          <option>Fan Repair</option>
+          <option>Fridge Repair</option>
+          <option>Washing Machine</option>
+          <option>Electrical Work</option>
+        </select>
+
+        <label>Address</label>
+        <textarea id="address" placeholder="Enter your address" required></textarea>
+
+        <label>Preferred Date</label>
+        <input id="date" type="date" required>
+
+        <label>Problem Description</label>
+        <textarea id="problem" placeholder="Describe the problem"></textarea>
+
+        <button class="submit-btn" type="submit">
+          Book Repair Service
+        </button>
+      </form>
+    </section>
+
+    <section class="bookings">
+      <h2>Your Bookings</h2>
+      <div id="bookingList">No bookings yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 FixAtHome | Home Repair Services</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
